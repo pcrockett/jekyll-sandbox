@@ -5,5 +5,9 @@ set -Eeuo pipefail
 
 apt-get update
 apt-get upgrade --yes
+apt-get install --yes ruby-full build-essential
+gem install jekyll bundler
 
-# Do more setup work here to initialize your VM sandbox.
+# If you plan on using a Git submodule in the src directory (recommended),
+# delete the following line:
+jekyll new ./src/
